@@ -23,16 +23,12 @@ const IndexPage = () => (
 export default IndexPage;
 
 export const query = graphql`
-	query HomePage {
-		contentfulHomePage {
-			title
-			date
-			content {
-				content
-			}
-			image {
-				file {
-					url
+	query blogs {
+		allContentfulBlog {
+			edges {
+				node {
+					title
+					date
 				}
 			}
 		}
