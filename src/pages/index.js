@@ -6,7 +6,9 @@ import Image from '../components/image';
 import SEO from '../components/seo';
 
 const IndexPage = (data) => {
-	const title = [ ...data.allContentfulBlog.edges.node.title ];
+	// const titles = data.allContentfulBlog.edges.map((edge) => edge.node.title);
+	const titles = data.data.allContentfulBlog.edges.map((edge) => edge.node.title);
+	// console.log(titles);
 	return (
 		<Layout>
 			<SEO title="Home" />
@@ -20,7 +22,7 @@ const IndexPage = (data) => {
 			</section>
 			<section style={{ background: 'black' }}>
 				<h1>BLOG</h1>
-				<h2>{title}</h2>
+				<h2>{titles}</h2>
 			</section>
 		</Layout>
 	);
