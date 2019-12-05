@@ -3,6 +3,7 @@
 @import url("https://fonts.googleapis.com/css?family=Archivo+Narrow:400,400i,500,500i,600,600i,700,700i&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Manjari:100,400,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i&display=swap");
 @font-face {
   font-family: "Open Sans";
   src: url("/fonts/OpenSans-Regular-webfont.woff2") format("woff2"), url("/fonts/OpenSans-Regular-webfont.woff") format("woff");
@@ -12,7 +13,22 @@ body {
   margin: 0;
 }
 
-.absolute-fill, .newpost img {
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  margin: 0;
+}
+
+h1 {
+  font-size: 45px;
+  color: white;
+  text-shadow: 3px 3px 1px #000000;
+}
+
+.absolute-fill, .banner-corner-topleft, .newpost-title {
   position: absolute;
   top: 0;
   left: 0;
@@ -26,7 +42,7 @@ body {
 }
 
 html {
-  font-family: "Manjari", "Roboto", "Raleway", "Archivo Narrow", "Rubik", sans-serif, "Courier New", Courier, monospace;
+  font-family: "Source Sans Pro", "Manjari", "Roboto", "Raleway", "Archivo Narrow", "Rubik", sans-serif, "Courier New", Courier, monospace;
   color: #040605;
   background: #fff;
 }
@@ -98,11 +114,38 @@ header nav a:hover:after {
 
 .newpost {
   position: relative;
-  width: 500px;
-  height: 500px;
-  margin: 25px auto;
+  margin: 50px auto;
+  width: 600px;
+  height: 375px;
 }
 
-.blogpost-container {
-  width: 500px;
+.newpost img {
+  width: inherit;
+}
+
+.banner-corner-topleft {
+  color: black;
+  width: auto;
+  height: auto;
+  transform: rotate(-15deg);
+  left: -40px;
+  background: white;
+  font-size: 30px;
+  text-transform: uppercase;
+  text-align: center;
+  width: initial;
+  padding: 10px;
+  margin-left: 0;
+  font-size: 45px;
+}
+
+.newpost-title {
+  margin: 20px;
+  text-align: right;
+}
+
+.blogcaption {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }

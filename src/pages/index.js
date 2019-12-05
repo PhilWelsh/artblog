@@ -16,13 +16,13 @@ const IndexPage = ({ data }) => {
 	<div className="blogpost newpost">
 		<img src={image} alt={title}/>
 				<div className="banner-corner-topleft">
-					<h1>New Post</h1>
-					</div>
+					<strong>New Post</strong>
+					</div><div className="newpost-title">
 
 		<h1>
 			{title}
-		</h1>
-		<div className="">
+		</h1></div>
+		<div className="blogcaption slide-down">
 			<p>{description}</p>
 		</div>
 	</div>

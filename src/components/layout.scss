@@ -10,13 +10,14 @@ $blue: #17bbff;
 $orange: #ffad1d;
 $green: #40dcbe;
 
-$s: 25px;
+$s: 50px;
 
 @import url("https://fonts.googleapis.com/css?family=Rubik:300,300i,400,400i,500,500i,700,700i,900,900i&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Archivo+Narrow:400,400i,500,500i,600,600i,700,700i&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Manjari:100,400,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i&display=swap");
 
 @font-face {
   font-family: "Open Sans";
@@ -27,6 +28,20 @@ $s: 25px;
 //CSS RESET
 body {
   margin: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  margin: 0;
+}
+
+h1 {
+  font-size: 45px;
+  color: white;
+  text-shadow: 3px 3px 1px #000000;
 }
 //CSS RESET END
 
@@ -44,7 +59,8 @@ body {
 }
 
 html {
-  font-family: "Manjari", "Roboto", "Raleway", "Archivo Narrow", "Rubik", sans-serif, "Courier New", Courier, monospace;
+  font-family: "Source Sans Pro", "Manjari", "Roboto", "Raleway", "Archivo Narrow", "Rubik", sans-serif, "Courier New",
+    Courier, monospace;
   color: $black;
   background: $white;
 }
@@ -110,16 +126,39 @@ header {
 
 .newpost {
   position: relative;
-  width: 500px;
-  height: 500px;
   margin: $s auto;
+  width: 600px;
+  height: 375px;
   img {
-    @extend .absolute-fill;
+    width: inherit;
   }
 }
 
-.blogpost-container {
-  width: 500px;
+.banner-corner-topleft {
+  @extend .absolute-fill;
+  color: black;
+  width: auto;
+  height: auto;
+  transform: rotate(-15deg);
+  left: -40px;
+  background: white;
+  font-size: 30px;
+  text-transform: uppercase;
+  text-align: center;
+  width: initial;
+  padding: 10px;
+  margin-left: 0;
+  font-size: 45px;
+}
+.newpost-title {
+  @extend .absolute-fill;
+  margin: 20px;
+  text-align: right;
+}
+.blogcaption {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 // @media only screen and (min-width: $small) {}
