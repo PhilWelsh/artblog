@@ -4,8 +4,7 @@ import React from 'react';
 
 const Header = ({ siteTitle }) => (
 	<header>
-		<div>
-			<div style={{ display: 'inline-block', padding: '20px', background: 'orange', marginRight: '5px' }} />
+		<div className="header-brand">
 			<Link
 				to="/"
 				style={{
@@ -13,10 +12,10 @@ const Header = ({ siteTitle }) => (
 					textDecoration: `none`
 				}}
 			>
-				PhilWelsh:
+				PhilWelsh_
 			</Link>
 		</div>
-		<nav>
+		<nav className="nav-menu">
 			<Link to="/art">art</Link>
 			<Link to="/blog">blog</Link>
 			<Link to="/contact">contact</Link>

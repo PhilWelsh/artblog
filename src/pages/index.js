@@ -35,7 +35,7 @@ const IndexPage = ({ data }) => {
 		<div className="container flex-center-h">
 				<NewestPost /></div>
 			</section>
-			<section style={{ background: 'black' }}>
+			<section className="section-blogposts-tiled">
 				<h1>BLOG</h1>
 				{/* <h2>{newestPostNode.title}</h2> */}
 			</section>
