@@ -1,7 +1,7 @@
 ---
-path: blogstorm
-date: 2019-12-17T04:22:01.267Z
+slug: blogstorm
 title: BlogStorm
+date: 2019-12-17T04:22:01.267Z
 ---
 Some ideas for new
 
