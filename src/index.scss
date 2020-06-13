@@ -1,0 +1,275 @@
+$pocket: 400px;
+$small: 800px;
+$medium: 1200px;
+$large: 1600px;
+$xlarge: 2000px;
+
+$black: #141415;
+$white: #fff;
+$blue: #17bbff;
+$orange: #ffad1d;
+$green: #40dcbe;
+
+$dark1: #28282a;
+
+$fast: all 0.2s;
+
+$s: 50px;
+
+@import url("https://fonts.googleapis.com/css?family=Rubik:300,300i,400,400i,500,500i,700,700i,900,900i&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Archivo+Narrow:400,400i,500,500i,600,600i,700,700i&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Manjari:100,400,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Expletus+Sans:400,400i,500,500i,600,600i,700,700i&display=swap");
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("/fonts/OpenSans-Regular-webfont.woff2") format("woff2"),
+    url("/fonts/OpenSans-Regular-webfont.woff") format("woff");
+}
+
+//CSS RESET
+body {
+  margin: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit; /* blue colors for links too */
+  text-decoration: inherit; /* no underline */
+  font-weight: bold;
+  color: white;
+  transition: $fast;
+  &:hover {
+    color: $orange;
+  }
+}
+
+button {
+  display: inline-block;
+  border: none;
+  padding: 1rem 2rem;
+  margin: 0;
+  text-decoration: none;
+  background: #0069ed;
+  color: #ffffff;
+  font-family: sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: center;
+  transition: background 250ms ease-in-out, transform 150ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+button:hover,
+button:focus {
+  background: #0053ba;
+}
+
+button:focus {
+  outline: 1px solid #fff;
+  outline-offset: -4px;
+}
+
+button:active {
+  transform: scale(0.99);
+}
+//CSS RESET END
+//RULES START
+
+h1 {
+  font-size: 34px;
+  color: white;
+  // text-shadow: 3px 3px 1px #000000;
+}
+p {
+  font-size: 18px;
+}
+
+.absolute-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.flex-center-h {
+  display: flex;
+  justify-content: center;
+}
+
+html {
+  font-family: "Expletus Sans", "Source Sans Pro", "Manjari", "Roboto",
+    "Raleway", "Archivo Narrow", "Rubik", sans-serif, "Courier New", Courier,
+    monospace;
+  color: $black;
+  background: $white;
+}
+
+.container {
+  margin: auto;
+  max-width: calc(100% - 60px);
+  width: 1200px;
+}
+.grid-text-space {
+  display: grid;
+
+  @media only screen and (min-width: $small) {
+    grid-template-columns: 1fr 1fr;
+  }
+  @media only screen and (min-width: $medium) {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+
+header {
+  background: $black;
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+main {
+  margin-top: 80px; //To offset the fixed header
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 0 5px 0;
+}
+
+footer {
+  display: flex;
+  justify-content: flex-end;
+  background: $black;
+  border-top: 2px solid white;
+  svg {
+    margin: -2px 5px;
+  }
+  .nav-menu {
+    display: flex;
+    justify-content: space-between;
+    a {
+      padding: 17px 20px 5px 0px;
+    }
+  }
+}
+
+.hero-section {
+  display: flex;
+  padding: 30px;
+  @media only screen and (min-width: $small) {
+    height: 300px;
+  }
+  @media only screen and (min-width: $large) {
+    height: 500px;
+  }
+  border-bottom: 3px solid $black;
+  text-align: center;
+}
+.intro-card {
+  border: 2px dashed $black;
+  width: 600px;
+  margin: auto;
+  padding: 10px;
+}
+
+//INDEX NEW POSTS
+
+.newpost {
+  position: relative;
+  margin: $s auto;
+  width: fit-content;
+  height: fit-content;
+  img {
+    width: 600px;
+  }
+}
+
+.banner-corner-topleft {
+  @extend .absolute-fill;
+  color: $black;
+  width: auto;
+  height: auto;
+  transform: rotate(-15deg);
+  left: -50px;
+  top: -30px;
+
+  background: white;
+  font-size: 30px;
+  text-transform: uppercase;
+  text-align: center;
+  width: initial;
+  padding: 10px;
+  margin-left: 0;
+  font-size: 45px;
+}
+.newpost-title {
+  @extend .absolute-fill;
+  right: 0;
+  margin: 20px;
+  text-align: right;
+  max-width: calc(100% - 50px);
+  width: auto;
+  height: auto;
+}
+.blogcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: calc(100% - 20px);
+  background: $dark1;
+  color: white;
+  padding: 10px;
+}
+
+//tiled section
+.section-first {
+  background: $black;
+  padding: $s;
+}
+
+.blogposts-container {
+  display: grid;
+  justify-content: stretch;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.blog-tabs {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.blog-card {
+  width: 250px;
+  overflow: hidden;
+  background: $dark1;
+  border-radius: 10px;
+  top: 0;
+  box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 1);
+  position: relative;
+  transition: $fast;
+  &:hover {
+    top: -2px;
+    box-shadow: 0px 4px 0px 0px rgba(255, 255, 255, 1);
+  }
+  h2 {
+    box-sizing: border-box;
+    padding: 10px;
+    width: 100%;
+    background: $dark1;
+    color: white;
+  }
+  img {
+    max-width: 100%;
+  }
+}
+// @media only screen and (min-width: $small) {}
