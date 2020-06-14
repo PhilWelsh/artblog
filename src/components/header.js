@@ -22,12 +22,12 @@ const Header = ({ siteTitle }) => (
         {/* 
         <h1><Link to="/art">art</Link>
         </h1> */}
-        <h1>
-          <Link to="/blog">blog</Link>
-        </h1>
-        <h1>
-          <Link to="/art">art</Link>
-        </h1>
+        <Link to="/blog">
+          <h1>blog</h1>
+        </Link>
+        <Link to="/art">
+          <h1>art</h1>
+        </Link>
       </nav>
     </div>
   </header>
