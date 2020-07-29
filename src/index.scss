@@ -4,8 +4,8 @@ $medium: 1200px;
 $large: 1600px;
 $xlarge: 2000px;
 
-$black: #141415;
-$white: #fff;
+$primary: #002a4d;
+$secondary: #fff;
 $blue: #17bbff;
 $orange: #ffad1d;
 $green: #40dcbe;
@@ -47,7 +47,6 @@ a {
   color: inherit; /* blue colors for links too */
   text-decoration: inherit; /* no underline */
   font-weight: bold;
-  color: white;
   transition: $fast;
   &:hover {
     color: $orange;
@@ -88,12 +87,13 @@ button:active {
 //RULES START
 
 h1 {
-  font-size: 34px;
-  color: white;
+  display: inline-block;
+  font-size: 40px;
+  border-bottom: 5px solid $primary;
   // text-shadow: 3px 3px 1px #000000;
 }
 p {
-  font-size: 18px;
+  font-size: 24px;
 }
 
 .absolute-fill {
@@ -112,8 +112,8 @@ html {
   font-family: "Expletus Sans", "Source Sans Pro", "Manjari", "Roboto",
     "Raleway", "Archivo Narrow", "Rubik", sans-serif, "Courier New", Courier,
     monospace;
-  color: $black;
-  background: $white;
+  color: $primary;
+  background: $secondary;
 }
 
 .container {
@@ -128,15 +128,18 @@ html {
     grid-template-columns: 1fr 1fr;
   }
   @media only screen and (min-width: $medium) {
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 1fr;
   }
 }
 
 header {
-  background: $black;
+  background: $secondary;
   position: fixed;
   width: 100%;
   top: 0;
+  box-shadow: 0 1px 5px 0 black;
+  font-size: 40px;
+  z-index: 9;
 }
 main {
   margin-top: 80px; //To offset the fixed header
@@ -144,22 +147,28 @@ main {
 .header {
   display: flex;
   justify-content: space-between;
-  padding: 30px 0 5px 0;
+  padding: 0;
 }
 
 footer {
-  display: flex;
-  justify-content: flex-end;
-  background: $black;
-  border-top: 2px solid white;
+  background: $primary;
+  color: white;
   svg {
     margin: -2px 5px;
   }
-  .nav-menu {
+  .footer {
     display: flex;
     justify-content: space-between;
+  }
+  .footer-brand {
+    font-size: 40px;
+  }
+  .nav-menu {
+    display: flex;
+    justify-content: flex-end;
     a {
-      padding: 17px 20px 5px 0px;
+      padding: 10px;
+      padding-top: 25px;
     }
   }
 }
@@ -173,11 +182,11 @@ footer {
   @media only screen and (min-width: $large) {
     height: 500px;
   }
-  border-bottom: 3px solid $black;
+  border-bottom: 3px solid $primary;
   text-align: center;
 }
 .intro-card {
-  border: 2px dashed $black;
+  border: 2px dashed $primary;
   width: 600px;
   margin: auto;
   padding: 10px;
@@ -197,7 +206,7 @@ footer {
 
 .banner-corner-topleft {
   @extend .absolute-fill;
-  color: $black;
+  color: $primary;
   width: auto;
   height: auto;
   transform: rotate(-15deg);
@@ -233,9 +242,21 @@ footer {
 }
 
 //tiled section
-.section-first {
-  background: $black;
+section:nth-of-type(even) {
+  background: repeating-linear-gradient(
+    45deg,
+    #ffffff,
+    rgba(0, 42, 77, 0.05) 1px,
+    rgba(0, 42, 77, 0.05) 9px,
+    rgba(70, 82, 152, 0) 10px
+  );
   padding: $s;
+  .container {
+    padding: 20px;
+    border-radius: 10px;
+    background: white;
+    border: 3px solid;
+  }
 }
 
 .blogposts-container {
@@ -266,7 +287,7 @@ footer {
     padding: 10px;
     width: 100%;
     background: $dark1;
-    color: white;
+    color: $primary;
   }
   img {
     max-width: 100%;

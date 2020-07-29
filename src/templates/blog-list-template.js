@@ -11,10 +11,9 @@ export const BlogPost = ({
   return (
     <a href={blogLink}>
       <div key={slug} className="blog-card">
-        <h2>{title}</h2>
         <img src={image} />
         <div style={{ padding: "10px", color: "white" }}>
-          <p>{intro}</p>
+          <p>{title}</p>
           <a>Read more</a>
         </div>
         {/* <div dangerouslySetInnerHTML={{ __html: html }} /> */}
@@ -37,15 +36,13 @@ const BlogList = ({ location, data: { allMarkdownRemark } }) => {
         </div>
       </section>
       <section className="section-first">
-        <div className="container">
-          <nav className="blog-tabs">
-            <button>tab1</button>
-            <button>tab2</button>
-            <button>tab3</button>
-            <button>tab4</button>
-            <button>tab5</button>
-          </nav>
-        </div>
+        <nav className="blog-tabs">
+          <button>tab1</button>
+          <button>tab2</button>
+          <button>tab3</button>
+          <button>tab4</button>
+          <button>tab5</button>
+        </nav>
         <div className="blogposts-container container">
           {allPosts.map(post => {
             return <BlogPost key={post.node.frontmatter.slug} {...post.node} />

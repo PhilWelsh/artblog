@@ -21,17 +21,17 @@ const IndexPage = ({ data }) => {
           </p>
         </div>
       </section>
-      <section className="section-first" style={{ color: "white" }}>
+      <section className="section-first">
         <div className="container">
-          <h2 style={{ display: "inline" }}>About.</h2>
-          <span style={{ display: "super" }}>(Thanks for caring)</span>
+          <h1>About.</h1>
+          <span style={{ color: "white" }}>(Thanks for caring)</span>
           {/* //scrolling interests/skills bar, on hover show some interest */}
           <div className="grid-text-space">
             <p>
               <br />
               I'm a graphic designer and web developer from the UK. I've worked
-              in the UK, China and Canada, currently working and living (and
-              loving it) in Toronto.
+              in the UK, China and Canada, currently working and living in (and
+              loving) Toronto.
               <br />
               <br /> This website is about my resolution to learn and practice
               creative things and document them as i go. Keeping a regular pace
@@ -47,7 +47,7 @@ const IndexPage = ({ data }) => {
           {/* <BlogPosts /> */}
         </div>
       </section>
-      <section className="section-second" style={{ color: "white" }}></section>
+      <section className="section-second"></section>
     </Layout>
   )
 }

@@ -1,4 +1,5 @@
 import { Link } from "gatsby"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 import PropTypes from "prop-types"
 import React from "react"
 
@@ -6,28 +7,14 @@ const Header = ({ siteTitle }) => (
   <header>
     <div className="container header">
       <div className="header-brand">
-        <h1>
-          <Link
-            to="/"
-            style={{
-              color: `white`,
-              textDecoration: `none`,
-            }}
-          >
-            philwelsh.
-          </Link>
-        </h1>
+        <AniLink fade to="/">
+          w.
+        </AniLink>
       </div>
       <nav className="nav-menu">
-        {/* 
-        <h1><Link to="/art">art</Link>
-        </h1> */}
-        <Link to="/blog">
-          <h1>blog</h1>
-        </Link>
-        <Link to="/art">
-          <h1>art</h1>
-        </Link>
+        <AniLink fade to="/blog">
+          blog.
+        </AniLink>
       </nav>
     </div>
   </header>
