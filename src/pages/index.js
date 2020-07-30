@@ -13,8 +13,8 @@ const IndexPage = ({ data }) => {
     <Layout>
       <SEO title="Home" />
       <section className="hero-section">
-        <div className="intro-card">
-          <h2>Design. Create. Inspire.</h2>
+        <div className="container">
+          <h1>Design. Create. Inspire.</h1>
           <p>
             Welcome to my site for blogging and posting my portfolio and
             works-in-progress
@@ -28,7 +28,6 @@ const IndexPage = ({ data }) => {
           {/* //scrolling interests/skills bar, on hover show some interest */}
           <div className="grid-text-space">
             <p>
-              <br />
               I'm a graphic designer and web developer from the UK. I've worked
               in the UK, China and Canada, currently working and living in (and
               loving) Toronto.

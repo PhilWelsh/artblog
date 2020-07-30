@@ -59,7 +59,7 @@ button {
   padding: 1rem 2rem;
   margin: 0;
   text-decoration: none;
-  background: #0069ed;
+  background: $primary;
   color: #ffffff;
   font-family: sans-serif;
   font-size: 1rem;
@@ -89,7 +89,7 @@ button:active {
 h1 {
   display: inline-block;
   font-size: 40px;
-  border-bottom: 5px solid $primary;
+  text-decoration: underline;
   // text-shadow: 3px 3px 1px #000000;
 }
 p {
@@ -137,12 +137,11 @@ header {
   position: fixed;
   width: 100%;
   top: 0;
-  box-shadow: 0 1px 5px 0 black;
   font-size: 40px;
   z-index: 9;
 }
 main {
-  margin-top: 80px; //To offset the fixed header
+  margin-top: 55px; //To offset the fixed header
 }
 .header {
   display: flex;
@@ -174,14 +173,8 @@ footer {
 }
 
 .hero-section {
-  display: flex;
-  padding: 30px;
-  @media only screen and (min-width: $small) {
-    height: 300px;
-  }
-  @media only screen and (min-width: $large) {
-    height: 500px;
-  }
+  padding: 10px;
+  height: 300px;
   border-bottom: 3px solid $primary;
   text-align: center;
 }
