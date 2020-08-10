@@ -29,4 +29,20 @@ option 3 was the best, and also easiest. Creating the symbol in 3d using the 'te
 \
 Playing around with some other features i created a kind of coin-like imprint around the edges by creating a sphere and using the coin center as a pivot point, rotated and copied the sphere to exactly loop around it using the radial array function. Setting only 1 radial value to change it circled the coin perfectly creating an equal indent and then extrusion (one sphere in, one smaller sphere to push out) to give those little bumps.\
 \
-After having created the 3d model i then needed to render it. Choosing a flat camera angle makes a perfect loop easier, and these specific views are provided by 3ds max as in most 3d programs. Animation is simple, just selecting a rotation setting a keyframe at the beginning middle and end with a linear animation and rotating exactly halfway, then another 180 degrees at the end of the frame count.
+After having created the 3d model i then needed to light and render it. 
+
+Lighting
+
+I really didn't want to spend too long on lighting and textures, as that wasn't the main purpose of this task, but like all good learning exercises, there was more to it than just the primary goal.
+
+I tried a few different textures, metal scratches and ambient reflection images, but these involved either mapping to one direction or unwrapping and applying the image specifically to this object which was a larger scope than this project needed, even the basic cylinder application that comes with 3ds max had some awkward stretching around certain area and in the end just set it to a basic colour with a lighter colour for it's reflection map... meaning that without light it would look a darker shade, but where the light hit brightest it would come off as a slightly lighter colour, in this case brown and yellow, giving it a real gold shine. boosting up it's shininess to a peak to mimic a metallic object that will reflect light strongest where it is most directly hit.
+
+Looking into some basic lighting ideas as the 3d indent shadow was not showing up under my basic lighting setup, i saw some blogs explaining that just like photographers will set up lighting rigs, in 3d too i needed to create a strong light focussed on my object, with a secondary source of light (effectively a lamp and a sun), for extra emphasis i added some small 'omni' lights which just brighten the whole scene. with nothing else in the scene to reflect or interfere with my 3d coin (which let's not forget needed to be added into a website)
+
+rendering\
+Choosing a flat camera angle makes a perfect loop easier, and these specific views are provided by 3ds max as in most 3d programs. Animation is simple, just selecting a rotation setting a keyframe at the beginning middle and end with a linear animation and rotating exactly halfway, then another 180 degrees at the end of the frame count. I chose 30 frames as it gave a smooth animation but not needlessly smooth, this would be being applied to a website so there's a balance between quality and weight, and this amount seemed appropriate.\
+After getting a good aspect ratio and rendering as tightly to the object's width and height as i could (to avoid needing to crop later), the animation was rendered, not as a video format but as 30 separate images... (Actually 31, i'll get back to that later)
+
+Sprite Sheet.
+
+Onto photoshop (finally)
