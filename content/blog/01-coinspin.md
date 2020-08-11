@@ -45,4 +45,8 @@ After getting a good aspect ratio and rendering as tightly to the object's width
 
 Sprite Sheet.
 
-Onto photoshop (finally)
+Onto photoshop (finally), because of my tight camera work i could simply arrange the images in a row (or a grid to save space) 
+
+**\[on writing this i assumed this was true and am going to look into this, i always assumed a grid is cleaner and easier to look at but also less memory for some reason]**
+
+because i chose a nice number, 30 frames, i could split it evenly onto a 5x6 grid, the first mistake on this part was that in my animation i had made a perfect 30 frame rotation, with frames 1 and 30 being a full 360 degree twist, 1 and 30 were identical causing a freeze in the rotation. i re-animated and created a shorter 22 frame animation, so that the full twist could have a perfect halfway point of 11 steps, but with the last frame removed could fit into a 3x7 grid
