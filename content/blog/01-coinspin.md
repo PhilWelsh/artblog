@@ -2,7 +2,7 @@
 slug: 01-CoinSpin
 title: 01-CoinSpin
 date: 2020-08-10T17:37:06.861Z
-image: assets/w..jpg
+image: assets/spincoin.gif
 intro: Creating a Spinning 3d coin in CSS
 ---
 So to start off, this is my first self set challenge for this site,
@@ -69,15 +69,15 @@ From here it was all up to the HTML/CSS\
 I saved out the image file to a image hosting service, then called it in as a background image, creating keyframes to move the background-position in the x-axis for 7 frames, and repeat, then drop the y-position and repeat. (calculated on width of each frame). and Voila!!! \
 according to caniuse.com background-image-x/y states that all modern browsers should have no trouble with this except for OperaMini and KaiOS (which i know very little about)
 
-
-
 So there you go. My first challenge done, although i went a little over my 1 week time frame, i had delved into a bunch of different features and published my first challenge post. The coin spin by itself is available to see on my codepen
+
+**\[additional: after this was created i uploaded the images to giphy to embed in this blog, but inserting multiple iframes was not only pointless but was cost-heavy for my laziness, and as they can't be saved as a gif file from render, i needed to create this gif in photoshop from the images. Effectively creating the animation my CSS was doing]**
 
 <https://codepen.io/philwelsh/pen/dyMyKXq>
 
+``
+
 look forward to the next one, and have a great day.
-
-
 
 ## Take aways.
 
