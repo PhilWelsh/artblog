@@ -7,8 +7,6 @@ intro: Creating a Spinning 3d coin in CSS
 ---
 So to start off, this is my first self set challenge for this site,
 
-I noticed a gap in my hero image and thought about what i could fill it with, some kind of stylish flourish, a character, a vista or backdrop... but i wanted some form of movement, an animation... and just to slap in any old animated gif wouldn't be so interesting as an experiment, and from there the idea developed...
-
 I had seen gifs or animated css being used to show 3d objects before, but hadn't really looked into it much, the same with any animation it is not really moving, it is just a series of images being swapped out quickly.\
 I had on a previous incarnation of my website included spinning animations using CSS-animations, transform, or rotate3d as seen in the link below
 
