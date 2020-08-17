@@ -1,4 +1,3 @@
-import { Link } from "gatsby"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import PropTypes from "prop-types"
 import React from "react"

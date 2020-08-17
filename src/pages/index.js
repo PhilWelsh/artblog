@@ -1,10 +1,8 @@
-import React, { Component } from "react"
-import ReactDOM from "react-dom"
+import React from "react"
 import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Calendar from "rc-calendar"
 import "rc-calendar/assets/index.css"
 
 const IndexPage = ({ data }) => {

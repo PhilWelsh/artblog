@@ -11,10 +11,9 @@ export const BlogPost = ({
   return (
     <a href={blogLink}>
       <div key={slug} className="blog-card">
-        <img src={image} />
+        <img src={image} alt={slug} />
         <div style={{ padding: "10px", color: "white" }}>
           <p>{title}</p>
-          <a>Read more</a>
         </div>
         {/* <div dangerouslySetInnerHTML={{ __html: html }} /> */}
       </div>

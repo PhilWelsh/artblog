@@ -1,19 +1,24 @@
 backend:
   name: github
   repo: PhilWelsh/artblog
-media_folder: static/assets
-public_folder: assets
+media_library:
+  name: cloudinary
+  config:
+    cloud_name: CLOUDINARY_API_KEY
+    api_key: CLOUDINARY_CLOUD_NAME
 
 collections:
   - name: "blog"
     label: "Blog"
     folder: "content/blog"
     create: true
+    publish:
+      publish_mode: editorial_workflow
     slug: "{{slug}}"
     fields:
       - { name: "slug", label: "slug", widget: string }
       - { name: "title", label: "Title", widget: "string" }
       - { name: "date", label: "Date", widget: datetime }
-      - { name: "image", label: "Image", widget: image }
+      - { name: "image", label: "string", widget: string }
       - { name: "intro", label: "Intro", widget: "string" }
       - { name: "body", label: "Body", widget: markdown }

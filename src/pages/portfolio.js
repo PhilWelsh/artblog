@@ -1,6 +1,5 @@
-import React, { Component } from "react"
-import ReactDOM from "react-dom"
-import { graphql } from "gatsby"
+import React from "react"
+// import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"

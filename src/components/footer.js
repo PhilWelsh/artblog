@@ -1,8 +1,7 @@
-import { Link } from "gatsby"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import PropTypes from "prop-types"
 import React from "react"
-import { FaLinkedinIn, FaCodepen, FaFileAlt, FaEnvelope } from "react-icons/fa"
+import { FaLinkedinIn, FaCodepen, FaEnvelope } from "react-icons/fa"
 
 const Footer = ({ siteTitle }) => (
   <footer>
