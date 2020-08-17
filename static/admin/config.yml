@@ -1,24 +1,24 @@
 backend:
   name: github
   repo: PhilWelsh/artblog
+
+publish_mode: editorial_workflow
 media_library:
   name: cloudinary
   config:
-    cloud_name: CLOUDINARY_API_KEY
-    api_key: CLOUDINARY_CLOUD_NAME
+    cloud_name: process.env.CLOUDINARY_CLOUD_NAME
+    api_key: process.env.CLOUDINARY_API_KEY
 
 collections:
   - name: "blog"
     label: "Blog"
     folder: "content/blog"
     create: true
-    publish:
-      publish_mode: editorial_workflow
     slug: "{{slug}}"
     fields:
       - { name: "slug", label: "slug", widget: string }
       - { name: "title", label: "Title", widget: "string" }
       - { name: "date", label: "Date", widget: datetime }
-      - { name: "image", label: "string", widget: string }
+      - { name: "image", label: "Cover Image", widget: image }
       - { name: "intro", label: "Intro", widget: "string" }
       - { name: "body", label: "Body", widget: markdown }

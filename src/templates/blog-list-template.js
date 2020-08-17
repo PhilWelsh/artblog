@@ -35,13 +35,13 @@ const BlogList = ({ location, data: { allMarkdownRemark } }) => {
         </div>
       </section>
       <section className="section-first">
-        <nav className="blog-tabs">
+        {/* <nav className="blog-tabs">
           <button>tab1</button>
           <button>tab2</button>
           <button>tab3</button>
           <button>tab4</button>
           <button>tab5</button>
-        </nav>
+        </nav> */}
         <div className="blogposts-container container">
           {allPosts.map(post => {
             return <BlogPost key={post.node.frontmatter.slug} {...post.node} />
