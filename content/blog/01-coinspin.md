@@ -3,7 +3,7 @@ slug: 01-CoinSpin
 title: 01-CoinSpin
 date: 2020-08-10T17:37:06.861Z
 image: >-
-  https://res.cloudinary.com/philwelsh/image/upload/q_auto/f_auto/v1581263269/sample.jpg
+  https://res.cloudinary.com/philwelsh/image/upload/q_auto/f_auto/v1597166284/projects/coinspin/spincoin_aiv4rw.gif
 intro: Creating a Spinning 3d coin in CSS
 ---
 So to start off, this is my first self set challenge for this site,
