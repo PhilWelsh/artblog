@@ -6,17 +6,21 @@ const BlogTemplate = ({
   data: {
     markdownRemark: {
       html,
-      frontmatter: { title, date, image, slug },
+      frontmatter: { title, date, intro, image, slug },
     },
   },
 }) => {
   return (
     <Layout>
-      <div className="blogpost newpost">
-        <h1>{title}</h1>
-        <img src={image} alt={title} />
-      </div>
-      <div dangerouselySetInnerHTML={{ __html: html }} />
+      <section className="hero-section">
+        <div className="container">
+          <h1>{title}</h1>
+          <p>{intro}</p>
+          <img src={image} alt={title} />
+        </div>
+      </section>
+      <div className="blogpost newpost"></div>
+      <div dangerouslySetInnerHTML={{ __html: html }} />
     </Layout>
   )
 }
@@ -28,6 +32,7 @@ export const query = graphql`
       html
       frontmatter {
         title
+        intro
         image
         date
         slug

@@ -6,8 +6,10 @@ publish_mode: editorial_workflow
 media_library:
   name: cloudinary
   config:
-    cloud_name: process.env.CLOUDINARY_CLOUD_NAME
-    api_key: process.env.CLOUDINARY_API_KEY
+    cloud_name: philwelsh
+    api_key: 514164997833992
+    default_transformations:
+      [[{ quality: "auto" }, { fetch_format: "auto" }], [{ f_auto, q_auto }]]
 
 collections:
   - name: "blog"
