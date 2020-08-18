@@ -19,8 +19,11 @@ const BlogTemplate = ({
           <img src={image} alt={title} />
         </div>
       </section>
-      <div className="blogpost newpost"></div>
-      <div dangerouslySetInnerHTML={{ __html: html }} />
+      <section>
+        <div className="container">
+          <div dangerouslySetInnerHTML={{ __html: html }} />
+        </div>
+      </section>
     </Layout>
   )
 }
