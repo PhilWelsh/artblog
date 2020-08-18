@@ -2,7 +2,8 @@
 slug: 01-CoinSpin
 title: 01-CoinSpin
 date: 2020-08-10T17:37:06.861Z
-image: assets/spincoin.gif
+image: >-
+  https://res.cloudinary.com/philwelsh/image/upload/q_auto/f_auto/v1597166284/projects/coinspin/spincoin_aiv4rw.gif
 intro: Creating a Spinning 3d coin in CSS
 ---
 So to start off, this is my first self set challenge for this site,
@@ -24,11 +25,11 @@ With a good knowledge of 3d programs (3ds max) this step was easy, but could be 
 
 The second idea was to use a 'modifier', create the coin from a cylinder and apply a displacement modifier which would imprint an image in 3 dimensions using black and white as it's extreme depths. This raised problems because the amount of polygons (triangles) needed in the shape before the imprint would work correctly was too immense for my computer... it wasn't efficient and came off blocky.
 
-![Blocky displacement modified coin](assets/coinspin-wip-2.jpg "Blocky displacement modified coin")
+![Blocky displacement modified coin](https://res.cloudinary.com/philwelsh/image/upload/q_auto/f_auto/v1597780214/projects/coinspin/coinspin-wip-2_sxdq3p.jpg "Blocky displacement modified coin")
 
 option 3 was the best, and also easiest. Creating the symbol in 3d using the 'text' feature, which uses the font of the users choice to create a path of vertices, creating a solid object from that, and creating a solid coin. 
 
-![3d text spline](assets/coinspin-wip-1.jpg "3d text spline")
+![3d text spline](https://res.cloudinary.com/philwelsh/image/upload/q_auto/f_auto/v1597780214/projects/coinspin/coinspin-wip-1_ktqxah.jpg "3d text spline")
 
 Then putting the 2 on top of one another and setting the pair to a 'boolean'. A boolean simply is a combo, where 2 shapes overlap like in a venn diagram, the result of the boolean can remove where the shapes overlap, only show the overlap or remove one from the other... as the coin is the main shape in this image I created the coin first and then after placing the symbols so they overlap the outside faces of the coin i set the boolean to remove them, creating an indent of where the shapes had overlapped onto the coin.\
 \
@@ -44,7 +45,7 @@ I tried a few different textures, metal scratches and ambient reflection images,
 
 Looking into some basic lighting ideas as the 3d indent shadow was not showing up under my basic lighting setup.
 
-![3d coin basic lighting](assets/coinspin-wip-3.jpg "3d coin basic lighting")
+![3d coin basic lighting](https://res.cloudinary.com/philwelsh/image/upload/q_auto/f_auto/v1597780213/projects/coinspin/coinspin-wip-3_llhdoe.jpg "3d coin basic lighting")
 
 I saw some blogs explaining that just like photographers will set up lighting rigs, in 3d too i needed to create a strong light focused on my object, with a secondary source of light (effectively a lamp and a sun), for extra emphasis i added some small 'omni' lights which just brighten the whole scene. with nothing else in the scene to reflect or interfere with my 3d coin (which let's not forget needed to be added into a website)
 
