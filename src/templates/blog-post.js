@@ -16,10 +16,14 @@ const BlogTemplate = ({
         <div className="container">
           <h1>{title}</h1>
           <p>{intro}</p>
-          <img src={image} alt={title} />
+          <img
+            src={image}
+            alt={title}
+            style={{ height: 300, margin: "auto", paddingTop: 15 }}
+          />
         </div>
       </section>
-      <section>
+      <section className="blog-section">
         <div className="container">
           <div dangerouslySetInnerHTML={{ __html: html }} />
         </div>

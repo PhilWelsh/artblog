@@ -174,7 +174,7 @@ footer {
 
 .hero-section {
   padding: 10px;
-  height: 300px;
+  height: 400px;
   border-bottom: 3px solid $primary;
   text-align: center;
 }
@@ -284,6 +284,20 @@ section:nth-of-type(even) {
   }
   img {
     max-width: 100%;
+  }
+}
+
+//blog-section
+.blog-section {
+  p {
+    font-size: 16px;
+  }
+  image {
+    display: flex;
+    box-sizing: border-box;
+    width: 650px;
+    max-width: 100%;
+    padding: 10px;
   }
 }
 // @media only screen and (min-width: $small) {}
