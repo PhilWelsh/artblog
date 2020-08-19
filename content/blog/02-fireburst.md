@@ -31,3 +31,7 @@ Thankfully Adobe Media encoder saves the day and allows you to render direct to 
 <https://graphicdesign.stackexchange.com/questions/91994/how-to-export-a-gif-from-after-effects>
 
 > go to Menu>Composition>Pre-Render and render it out as an uncompressed MOV file. Then you can drag that file onto Photoshop and it will open in the video timeline. From there you can "Save for Web" as an animated GIF file
+
+To do.
+
+Next steps are to add glow and embers, as well as perhaps different styles.
