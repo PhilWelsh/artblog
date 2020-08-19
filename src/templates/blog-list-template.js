@@ -27,7 +27,7 @@ const BlogList = ({ location, data: { allMarkdownRemark } }) => {
     <Layout>
       <section className="hero-section">
         <div className="container">
-          <h1>Blog</h1>
+          <h1>blog</h1>
           <p>
             Welcome to my blog archive, new and old. Please find some interest
             in these somewhat random allotment of everyday tasks that i've done

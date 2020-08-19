@@ -12,7 +12,7 @@ const IndexPage = ({ data }) => {
       <SEO title="Home" />
       <section className="hero-section">
         <div className="container">
-          <h1>Design. Create. Inspire.</h1>
+          <h1>design. create. inspire.</h1>
           <p>
             Welcome to my site for blogging and posting my portfolio and
             works-in-progress
@@ -21,7 +21,7 @@ const IndexPage = ({ data }) => {
       </section>
       <section className="section-first">
         <div className="container">
-          <h1>About.</h1>
+          <h1>about.</h1>
           <span style={{ color: "white" }}>(Thanks for caring)</span>
           {/* //scrolling interests/skills bar, on hover show some interest */}
           <div className="grid-text-space">
