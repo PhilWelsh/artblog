@@ -34,4 +34,12 @@ Thankfully Adobe Media encoder saves the day and allows you to render direct to 
 
 To do.
 
-Next steps are to add glow and embers, as well as perhaps different styles.
+Particle effects for embers
+
+Looped animation of particle effects by adding a duplicated truncated version of the beginning at the end to fade in as animation fades out
+
+Added Glow, to firebase layers and embers
+
+Custom shapes added though not necessary
+
+Thoughts - this would be easier in a 3d program
