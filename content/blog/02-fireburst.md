@@ -34,12 +34,18 @@ Thankfully Adobe Media encoder saves the day and allows you to render direct to 
 
 To do.
 
-Particle effects for embers
+**Particle effects for embers**
+
+Using a particle effect as triangles and setting gravity to negative to make embers fly upwards... before i realised there was a fire setting with a fluttering wind style effect.
 
 Looped animation of particle effects by adding a duplicated truncated version of the beginning at the end to fade in as animation fades out
 
 Added Glow, to firebase layers and embers
 
-Custom shapes added though not necessary
+Additionally could set the polygons on the embers to fit a shape, using another layer as the texture. but triangles or squares that fit the motion direction seemed just as good as any other shape for embers, just keeping them small with random sizing and glows.
 
-Thoughts - this would be easier in a 3d program
+Thoughts - particle effects have always been easier to perform with more variables more easily accessible however maybe just because of my larger knowledge in 3d. Animation timelines, looping and 2d shapes are easy and nice but rendering either comes out ridiculously large or super compressed.
+
+**Take Aways.**
+
+I'm happy with the things i learned and definitely a good starting off point in seeing the cool things you can easily do with AE. I'm looking forward to seeing what else i can add or do with this program, though the large render file sizes and reliance on plugins make me a little more hesitant to use this and not the 3d effects in a program like 3ds max which has a myriad of built in particle and environment effects.
