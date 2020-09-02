@@ -3,7 +3,7 @@ slug: 02-fireburst
 title: 02-Fireburst
 date: 2020-08-18T22:03:28.425Z
 image: >-
-  https://res.cloudinary.com/philwelsh/image/upload/q_auto/f_auto/v1597788271/projects/fireburst/pngtree-fire-logo-icon-design-template-vector-png-image_705401_t1df33.jpg
+  https://res.cloudinary.com/philwelsh/image/upload/q_auto/f_auto/v1599081234/philwelsh.com/blog-images/compiled-fire1_bmps3r.gif
 intro: Creating an animated flame in AE
 ---
 Learning from my last project i refined my process a little, starting with a simple task that i could expand upon, so that the first draft would look rough but then i could learn and add iterations and show improvements on a basic setup
@@ -26,13 +26,9 @@ Now i had a nice flame animation, but it is a bit uncontrollable (much like a re
 After the basics were done i looked into timelines, render outputs and such. Looping the wave effect was painfully easy and obvious at second glance, just looking at the wave speed on each layer was in fact repetitions per number of seconds, with one set to 1.5 and the others set to 2, the smallest number available was 6. My first animation was over 1.5gb... looking into this there are a heap of settings to adjust, that my tiny little flickering fire did not need such high fidelity audio or blending between frames. \
 I also considered the burdon any even slightly large render would take on my image hosting provider and thought ... yes... another animated gif... I mean, it makes sense for the cheapest hosted image, but doing this process for every animation i host is going to be annoying. 
 
-Thankfully Adobe Media encoder saves the day and allows you to render direct to gif and add a bunch of handy toys too... unfortunately i don't have access to that, so i found another answer in 
+Thankfully Adobe Media encoder saves the day and allows you to render direct to gif and add a bunch of handy toys too... unfortunately i don't have access to that, so i found a number of other answers.
 
-<https://graphicdesign.stackexchange.com/questions/91994/how-to-export-a-gif-from-after-effects>
-
-> go to Menu>Composition>Pre-Render and render it out as an uncompressed MOV file. Then you can drag that file onto Photoshop and it will open in the video timeline. From there you can "Save for Web" as an animated GIF file
-
-To do.
+I spent days trying to make AirBnB's lottie/bodymovin to work (which i will definitely come back to as i have a major interest in it.) but using particle effects and a plugin not supported fully with my current version of AE, I returned to photoshop, but this time imported 'image as sequence' which automatically compiles all files in selected folder in sequence. making rendering out to gif a lot faster... though still inconvenient... and with Bodymovin the animation could have been compiled into vectors low in size enough to use in a web application with little slow-down
 
 **Particle effects for embers**
 
