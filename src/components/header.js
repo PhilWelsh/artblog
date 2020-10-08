@@ -12,7 +12,7 @@ const Header = ({ siteTitle }) => (
       </div>
       <nav className="nav-menu">
         <AniLink fade to="/blog">
-          blog.
+          ???
         </AniLink>
       </nav>
     </div>
