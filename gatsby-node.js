@@ -39,14 +39,14 @@ exports.createPages = ({ graphql, actions }) => {
           reject(result.errors)
         }
         createPage({
-          path: "/blog",
+          path: "/dailies",
           component: path.resolve("src/templates/blog-list-template.js"),
         })
         const posts = result.data.allMarkdownRemark.edges
         const blogPostTemplate = path.resolve("src/templates/blog-post.js")
         posts.forEach(({ node }, index) => {
           createPage({
-            path: "blog/" + node.frontmatter.slug,
+            path: "dailies/" + node.frontmatter.slug,
             component: blogPostTemplate,
             context: {
               slug: node.frontmatter.slug,

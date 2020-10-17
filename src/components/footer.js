@@ -1,7 +1,7 @@
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import PropTypes from "prop-types"
 import React from "react"
-import { FaLinkedinIn, FaCodepen, FaEnvelope } from "react-icons/fa"
+import { FaLinkedinIn, FaCodepen, FaEnvelope, FaFileAlt } from "react-icons/fa"
 
 const Footer = ({ siteTitle }) => (
   <footer>
@@ -14,19 +14,23 @@ const Footer = ({ siteTitle }) => (
       <nav className="nav-menu">
         <a href="https://www.linkedin.com/in/welshphil/">
           <FaLinkedinIn />
-          LinkedIn
+          {/* LinkedIn */}
         </a>
         <a href="https://codepen.io/philwelsh">
           <FaCodepen />
-          CodePen
+          {/* CodePen */}
         </a>
-        {/* <a href="/philwelsh-resume">
-        <FaFileAlt />
-        Resume
-      </a> */}
         <a href="mailto:philwelsh3d@gmail.com">
           <FaEnvelope />
-          Email
+          {/* Email */}
+        </a>
+        <a href="/philwelsh-resume">
+          <FaFileAlt />
+          {/*Resume*/}
+        </a>
+        <a href="/blog">
+          <FaFileAlt />
+          {/*Blog*/}
         </a>
       </nav>
     </div>

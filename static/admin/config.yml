@@ -14,7 +14,7 @@ media_library:
 collections:
   - name: "blog"
     label: "Blog"
-    folder: "content/blog"
+    folder: "content/dailies"
     create: true
     slug: "{{slug}}"
     fields:

@@ -7,7 +7,7 @@ export const BlogPost = ({
   html,
   frontmatter: { title, intro, date, image, slug },
 }) => {
-  const blogLink = `blog/${slug}`
+  const blogLink = `dailies/${slug}`
   return (
     <a href={blogLink}>
       <div key={slug} className="blog-card">
@@ -27,22 +27,20 @@ const BlogList = ({ location, data: { allMarkdownRemark } }) => {
     <Layout>
       <section className="hero-section">
         <div className="container">
-          <h1>blog</h1>
-          <p>
-            Welcome to my blog archive, new and old. Please find some interest
-            in these somewhat random allotment of everyday tasks that i've done
-          </p>
+          <div className="grid-two-col">
+            <div>
+              <h1>dailies</h1>
+              <p>
+                Welcome to my daily blog archive, new and old. Here i post my
+                everyday tasks, achievements, or struggles as i face them.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
-      <section className="section-first">
-        {/* <nav className="blog-tabs">
-          <button>tab1</button>
-          <button>tab2</button>
-          <button>tab3</button>
-          <button>tab4</button>
-          <button>tab5</button>
-        </nav> */}
+      <section className="first-section">
         <div className="blogposts-container container">
+          {/* YO */}
           {allPosts.map(post => {
             return <BlogPost key={post.node.frontmatter.slug} {...post.node} />
           })}
