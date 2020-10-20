@@ -40,7 +40,7 @@ const IndexPage = ({ data }) => {
                   development.
                 </p>
                 <a
-                  href="https://res.cloudinary.com/philwelsh/image/upload/v1603166786/philwelsh.com/philwelsh-cv-2020.pdf"
+                  href="https://res.cloudinary.com/philwelsh/image/upload/f_auto,q_auto/v1603166786/philwelsh.com/philwelsh-cv-2020.pdf"
                   download
                   className="link"
                   style={{ borderColor: "white" }}
@@ -100,6 +100,9 @@ const IndexPage = ({ data }) => {
                     )}
                   </Spring>
                 </div>
+                {/* TODO animate cascade slide in */}
+                {/* TODO click on each section */}
+                {/* TODO animate bouncing to entice clicking */}
                 <div className="split">
                   <div className="strip-gallery">
                     <div>
@@ -224,6 +227,8 @@ const IndexPage = ({ data }) => {
                           graphic design and marketing.
                         </p>
                         {/* TODO CREATE PORTFOLIO PAGE */}
+                        {/* TODO animate cascade slide in */}
+                        {/* TODO animate bouncing to entice clicking */}
                         {/* <a href="/portfolio">Go to /portfolio</a> */}
                         <hr />
                       </div>
@@ -236,55 +241,55 @@ const IndexPage = ({ data }) => {
                     <PortfolioTile
                       link={"https://www.netvue.com"}
                       imgUrl={
-                        "https://res.cloudinary.com/philwelsh/image/upload/v1602907393/philwelsh.com/site-images/logo-netvue_jrurlr.jpg"
+                        "https://res.cloudinary.com/philwelsh/image/upload/f_auto,q_auto/v1602907393/philwelsh.com/site-images/logo-netvue_jrurlr.jpg"
                       }
                       imgUrl2={
-                        "https://res.cloudinary.com/philwelsh/image/upload/v1602948667/philwelsh.com/site-images/site-netvue_hveip9.jpg"
+                        "https://res.cloudinary.com/philwelsh/image/upload/f_auto,q_auto/v1602948667/philwelsh.com/site-images/site-netvue_hveip9.jpg"
                       }
                     />
                     <PortfolioTile
                       link={"https://www.controlgap.com"}
                       imgUrl={
-                        "https://res.cloudinary.com/philwelsh/image/upload/v1602907393/philwelsh.com/site-images/logo-controlgap_si3iqj.jpg"
+                        "https://res.cloudinary.com/philwelsh/image/upload/f_auto,q_auto/v1602907393/philwelsh.com/site-images/logo-controlgap_si3iqj.jpg"
                       }
                       imgUrl2={
-                        "https://res.cloudinary.com/philwelsh/image/upload/v1602948667/philwelsh.com/site-images/site-controlgap_wv0mml.jpg"
+                        "https://res.cloudinary.com/philwelsh/image/upload/f_auto,q_auto/v1602948667/philwelsh.com/site-images/site-controlgap_wv0mml.jpg"
                       }
                     />
                     <PortfolioTile
                       link={"https://www.firstliteled.co.uk"}
                       imgUrl={
-                        "https://res.cloudinary.com/philwelsh/image/upload/v1602907393/philwelsh.com/site-images/logo-firstlite_blxixi.jpg"
+                        "https://res.cloudinary.com/philwelsh/image/upload/f_auto,q_auto/v1602907393/philwelsh.com/site-images/logo-firstlite_blxixi.jpg"
                       }
                       imgUrl2={
-                        "https://res.cloudinary.com/philwelsh/image/upload/v1602948667/philwelsh.com/site-images/site-firstlite_tgbb71.jpg"
+                        "https://res.cloudinary.com/philwelsh/image/upload/f_auto,q_auto/v1602948667/philwelsh.com/site-images/site-firstlite_tgbb71.jpg"
                       }
                     />
                     <PortfolioTile
                       link={"https://www.meccabingo.co.uk"}
                       imgUrl={
-                        "https://res.cloudinary.com/philwelsh/image/upload/v1602907393/philwelsh.com/site-images/logo-mecca_t45t2x.jpg"
+                        "https://res.cloudinary.com/philwelsh/image/upload/f_auto,q_auto/v1602907393/philwelsh.com/site-images/logo-mecca_t45t2x.jpg"
                       }
                       imgUrl2={
-                        "https://res.cloudinary.com/philwelsh/image/upload/v1602948667/philwelsh.com/site-images/site-mecca_r102as.jpg"
+                        "https://res.cloudinary.com/philwelsh/image/upload/f_auto,q_auto/v1602948667/philwelsh.com/site-images/site-mecca_r102as.jpg"
                       }
                     />
                     <PortfolioTile
                       link={"https://www.lowes.co.uk"}
                       imgUrl={
-                        "https://res.cloudinary.com/philwelsh/image/upload/v1602907393/philwelsh.com/site-images/logo-lowes_siuisv.jpg"
+                        "https://res.cloudinary.com/philwelsh/image/upload/f_auto,q_auto/v1602907393/philwelsh.com/site-images/logo-lowes_siuisv.jpg"
                       }
                       imgUrl2={
-                        "https://res.cloudinary.com/philwelsh/image/upload/v1602948667/philwelsh.com/site-images/site-lowes_cupihi.jpg"
+                        "https://res.cloudinary.com/philwelsh/image/upload/f_auto,q_auto/v1602948667/philwelsh.com/site-images/site-lowes_cupihi.jpg"
                       }
                     />
                     <PortfolioTile
                       link={"https://www.hadriantechnology.co.uk"}
                       imgUrl={
-                        "https://res.cloudinary.com/philwelsh/image/upload/v1602907393/philwelsh.com/site-images/logo-hadrian_qsgle1.jpg"
+                        "https://res.cloudinary.com/philwelsh/image/upload/f_auto,q_auto/v1602907393/philwelsh.com/site-images/logo-hadrian_qsgle1.jpg"
                       }
                       imgUrl2={
-                        "https://res.cloudinary.com/philwelsh/image/upload/v1602948667/philwelsh.com/site-images/site-hadrian_twditv.jpg"
+                        "https://res.cloudinary.com/philwelsh/image/upload/f_auto,q_auto/v1602948667/philwelsh.com/site-images/site-hadrian_twditv.jpg"
                       }
                     />
                   </div>
@@ -382,7 +387,7 @@ const IndexPage = ({ data }) => {
                   </a>
                   <a
                     className="link"
-                    href="https://res.cloudinary.com/philwelsh/image/upload/v1603166786/philwelsh.com/philwelsh-cv-2020.pdf"
+                    href="https://res.cloudinary.com/philwelsh/image/upload/f_auto,q_auto/v1603166786/philwelsh.com/philwelsh-cv-2020.pdf"
                     download
                   >
                     Resume

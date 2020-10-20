@@ -25,7 +25,7 @@ const Footer = ({ siteTitle }) => (
           {/* CodePen */}
         </a>
         <a
-          href="https://res.cloudinary.com/philwelsh/image/upload/v1603166786/philwelsh.com/philwelsh-cv-2020.pdf"
+          href="https://res.cloudinary.com/philwelsh/image/upload/f_auto,q_auto/v1603166786/philwelsh.com/philwelsh-cv-2020.pdf"
           download
         >
           <FaFileAlt />
