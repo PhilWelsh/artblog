@@ -12,6 +12,10 @@ const Header = ({ siteTitle }) => (
         </AniLink>
       </div>
       <nav className="nav-menu">
+        <a href="mailto:philwelsh3d@gmail.com">
+          <FaEnvelope />
+          {/* Email */}
+        </a>
         <a href="https://www.linkedin.com/in/welshphil/">
           <FaLinkedinIn />
           {/* LinkedIn */}
@@ -20,11 +24,10 @@ const Header = ({ siteTitle }) => (
           <FaCodepen />
           {/* CodePen */}
         </a>
-        <a href="mailto:philwelsh3d@gmail.com">
-          <FaEnvelope />
-          {/* Email */}
-        </a>
-        <a href="/philwelsh-resume">
+        <a
+          href="https://res.cloudinary.com/philwelsh/image/upload/v1603166786/philwelsh.com/philwelsh-cv-2020.pdf"
+          download
+        >
           <FaFileAlt />
           {/*Resume*/}
         </a>

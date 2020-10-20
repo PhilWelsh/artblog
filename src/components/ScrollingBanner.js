@@ -2,8 +2,10 @@ import React from "react"
 
 const ScrollingBanner = () => {
   return (
-    <div class="slideshow">
-      <div class="images"></div>
+    <div class="slideshow-wrapper">
+      <div class="slideshow">
+        <div class="images"></div>
+      </div>
     </div>
   )
 }

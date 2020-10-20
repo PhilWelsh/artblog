@@ -1,9 +1,9 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { useChain, animated } from "react-spring"
+// import { useChain, animated } from "react-spring"
 import { Spring } from "react-spring/renderprops"
 import VisibilitySensor from "react-visibility-sensor"
-import AwesomeSlider from "react-awesome-slider"
+// import AwesomeSlider from "react-awesome-slider"
 import "react-awesome-slider/dist/styles.css"
 import { FaLinkedinIn, FaCodepen, FaEnvelope, FaFileAlt } from "react-icons/fa"
 import PortfolioTile from "../components/PortfolioTile"
@@ -14,6 +14,8 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import "rc-calendar/assets/index.css"
 
+/* TODO darkmode */
+
 const IndexPage = ({ data }) => {
   // const blogTitle = data.nlogPosts.title;
   return (
@@ -23,7 +25,10 @@ const IndexPage = ({ data }) => {
         <ScrollingBanner />
         <div className="container">
           <div className="grid-two-col">
-            <div></div>
+            <div>
+              <div className="hero-picture"></div>
+              {/* TODO hair length subject to change */}
+            </div>
             <div className="list">
               <div className="hero-text">
                 <h1>Phil Welsh</h1>
@@ -35,7 +40,8 @@ const IndexPage = ({ data }) => {
                   development.
                 </p>
                 <a
-                  href="/philwelsh-resume"
+                  href="https://res.cloudinary.com/philwelsh/image/upload/v1603166786/philwelsh.com/philwelsh-cv-2020.pdf"
+                  download
                   className="link"
                   style={{ borderColor: "white" }}
                 >
@@ -60,43 +66,68 @@ const IndexPage = ({ data }) => {
         </div>
       </section>
       <section className="skills-section" id="skills-section">
-        <div className="container">
-          <div className="grid-two-col">
-            <div className="split">
-              <h1>Skills</h1>
-              <p>
-                Starting from an education in design and digital media, and
-                delving deeper into code with each project I now have a wide
-                range of complimentary skills I plan to continue to add to and
-                develop.
-              </p>
-            </div>
-            <div className="split">
-              <div className="strip-gallery">
-                <div>
-                  <h2>Adobe Suite</h2>
-                  <p>Photoshop, Illustrator, AfterEffects, XD</p>
+        <VisibilitySensor partialVisibility>
+          {({ isVisible }) => (
+            <div className="container">
+              <div className="grid-two-col">
+                <div className="split">
+                  <Spring
+                    delay={0}
+                    to={{
+                      opacity: isVisible ? 1 : 0,
+                      transform: isVisible
+                        ? `translateY(0px)`
+                        : "translateY(100px)",
+                    }}
+                  >
+                    {({ opacity, transform }) => (
+                      <div
+                        style={{
+                          opacity,
+                          transform,
+                          transitionDuration: ".3s",
+                        }}
+                      >
+                        <h1>Skills</h1>
+                        <p>
+                          Starting from an education in design and digital
+                          media, and delving deeper into code with each project
+                          I now have a wide range of complimentary skills I plan
+                          to continue to add to and develop.
+                        </p>
+                        <hr />
+                      </div>
+                    )}
+                  </Spring>
                 </div>
-                <div>
-                  <h2>Coding</h2>
-                  <p>HTML, CSS, Javascript, ReactJS, Jquery, LESS/SASS</p>
-                </div>
-                <div>
-                  <h2>JAMStack</h2>
-                  <p>Gatsby, Netlify, Cloudinary, Contentful</p>
-                </div>
-                <div>
-                  <h2>Source Control, Management</h2>
-                  <p>Git, Bitbucket, JIRA</p>
-                </div>
-                <div>
-                  <h2>3D/Animation</h2>
-                  <p>Zbrush, 3DSMax</p>
+                <div className="split">
+                  <div className="strip-gallery">
+                    <div>
+                      <h2>Adobe</h2>
+                      <p>Photoshop, Illustrator, AfterEffects, XD</p>
+                    </div>
+                    <div>
+                      <h2>Code</h2>
+                      <p>HTML, CSS, Javascript, ReactJS, Jquery, LESS/SASS</p>
+                    </div>
+                    <div>
+                      <h2>JAM</h2>
+                      <p>Gatsby, Netlify, Cloudinary, Contentful</p>
+                    </div>
+                    <div>
+                      <h2>Source Control</h2>
+                      <p>Git, Bitbucket, JIRA</p>
+                    </div>
+                    <div>
+                      <h2>3D</h2>
+                      <p>Zbrush, 3DSMax</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
+          )}
+        </VisibilitySensor>
       </section>
       <section className="first-section">
         {/* TODO ADD DAILIES */}
@@ -203,16 +234,59 @@ const IndexPage = ({ data }) => {
                 <div className="split">
                   <div className="change1">
                     <PortfolioTile
-                      link="https://res.cloudinary.com/philwelsh/image/upload/v1581263269/sample.jpg"
-                      imgUrl="https://res.cloudinary.com/philwelsh/image/upload/v1581263269/sample.jpg"
-                      imgUrl2="https://res.cloudinary.com/philwelsh/image/upload/v1597780213/projects/coinspin/coinspin-wip-3_llhdoe.jpg"
+                      link={"https://www.netvue.com"}
+                      imgUrl={
+                        "https://res.cloudinary.com/philwelsh/image/upload/v1602907393/philwelsh.com/site-images/logo-netvue_jrurlr.jpg"
+                      }
+                      imgUrl2={
+                        "https://res.cloudinary.com/philwelsh/image/upload/v1602948667/philwelsh.com/site-images/site-netvue_hveip9.jpg"
+                      }
                     />
-                    <a></a>
-                    <a></a>
-                    <a></a>
-                    <a></a>
-                    <a></a>
-                    <a></a>
+                    <PortfolioTile
+                      link={"https://www.controlgap.com"}
+                      imgUrl={
+                        "https://res.cloudinary.com/philwelsh/image/upload/v1602907393/philwelsh.com/site-images/logo-controlgap_si3iqj.jpg"
+                      }
+                      imgUrl2={
+                        "https://res.cloudinary.com/philwelsh/image/upload/v1602948667/philwelsh.com/site-images/site-controlgap_wv0mml.jpg"
+                      }
+                    />
+                    <PortfolioTile
+                      link={"https://www.firstliteled.co.uk"}
+                      imgUrl={
+                        "https://res.cloudinary.com/philwelsh/image/upload/v1602907393/philwelsh.com/site-images/logo-firstlite_blxixi.jpg"
+                      }
+                      imgUrl2={
+                        "https://res.cloudinary.com/philwelsh/image/upload/v1602948667/philwelsh.com/site-images/site-firstlite_tgbb71.jpg"
+                      }
+                    />
+                    <PortfolioTile
+                      link={"https://www.meccabingo.co.uk"}
+                      imgUrl={
+                        "https://res.cloudinary.com/philwelsh/image/upload/v1602907393/philwelsh.com/site-images/logo-mecca_t45t2x.jpg"
+                      }
+                      imgUrl2={
+                        "https://res.cloudinary.com/philwelsh/image/upload/v1602948667/philwelsh.com/site-images/site-mecca_r102as.jpg"
+                      }
+                    />
+                    <PortfolioTile
+                      link={"https://www.lowes.co.uk"}
+                      imgUrl={
+                        "https://res.cloudinary.com/philwelsh/image/upload/v1602907393/philwelsh.com/site-images/logo-lowes_siuisv.jpg"
+                      }
+                      imgUrl2={
+                        "https://res.cloudinary.com/philwelsh/image/upload/v1602948667/philwelsh.com/site-images/site-lowes_cupihi.jpg"
+                      }
+                    />
+                    <PortfolioTile
+                      link={"https://www.hadriantechnology.co.uk"}
+                      imgUrl={
+                        "https://res.cloudinary.com/philwelsh/image/upload/v1602907393/philwelsh.com/site-images/logo-hadrian_qsgle1.jpg"
+                      }
+                      imgUrl2={
+                        "https://res.cloudinary.com/philwelsh/image/upload/v1602948667/philwelsh.com/site-images/site-hadrian_twditv.jpg"
+                      }
+                    />
                   </div>
                   {/* TODO create component for website links */}
 
@@ -285,6 +359,7 @@ const IndexPage = ({ data }) => {
                           please contact me or see my work on the following
                           links
                         </p>
+                        <hr />
                       </div>
                     )}
                   </Spring>
@@ -305,7 +380,11 @@ const IndexPage = ({ data }) => {
                     Codepen
                     <FaCodepen />
                   </a>
-                  <a className="link" href="/philwelsh-resume">
+                  <a
+                    className="link"
+                    href="https://res.cloudinary.com/philwelsh/image/upload/v1603166786/philwelsh.com/philwelsh-cv-2020.pdf"
+                    download
+                  >
                     Resume
                     <FaFileAlt />
                   </a>

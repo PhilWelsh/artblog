@@ -5,7 +5,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import "rc-calendar/assets/index.css"
 
-export const PortfolioGraphicPost = ({}) => {
+export const PortfolioGraphicPost = () => {
   const blogLink = `/`
   return (
     <a href={blogLink}>
