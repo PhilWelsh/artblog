@@ -40,11 +40,12 @@ const IndexPage = ({ data }) => {
                   development.
                 </p>
                 <a
-                  href="https://res.cloudinary.com/philwelsh/image/upload/f_auto,q_auto/v1603166786/philwelsh.com/philwelsh-cv-2020.pdf"
+                  href="https://res.cloudinary.com/philwelsh/image/upload/f_auto,q_auto/philwelsh.com/philwelsh-cv-2020.pdf"
                   download
                   className="link"
                   style={{ borderColor: "white" }}
                 >
+                  {/* TODO ADD ACCENTS */}
                   See My Resume
                   <FaFileAlt />
                 </a>
@@ -387,9 +388,10 @@ const IndexPage = ({ data }) => {
                   </a>
                   <a
                     className="link"
-                    href="https://res.cloudinary.com/philwelsh/image/upload/f_auto,q_auto/v1603166786/philwelsh.com/philwelsh-cv-2020.pdf"
+                    href="https://res.cloudinary.com/philwelsh/image/upload/f_auto,q_auto/philwelsh.com/philwelsh-cv-2020.pdf"
                     download
                   >
+                    {/* TODO ADD ACCENTS */}
                     Resume
                     <FaFileAlt />
                   </a>
