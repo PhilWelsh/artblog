@@ -22,6 +22,7 @@ const IndexPage = ({ data }) => {
     <Layout>
       <SEO title="Home" />
       <section className="hero-section" style={{ position: "relative" }}>
+        {/* TODO fix banner click, crop 1px from bottom */}
         <ScrollingBanner />
         <div className="container">
           <div className="grid-two-col">
