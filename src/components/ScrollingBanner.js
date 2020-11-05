@@ -2,9 +2,9 @@ import React from "react"
 
 const ScrollingBanner = () => {
   return (
-    <div class="slideshow-wrapper">
-      <div class="slideshow">
-        <div class="images"></div>
+    <div className="slideshow-wrapper">
+      <div className="slideshow">
+        <div className="images"></div>
       </div>
     </div>
   )

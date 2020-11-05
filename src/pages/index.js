@@ -171,7 +171,7 @@ const IndexPage = ({ data }) => {
                 <div className="split">
                   <div className="gallery-container">
                     <a href="/portfolio#web" className="gallery-item">
-                      <div class="blog-card">
+                      <div className="blog-card">
                         <img src="assets/school-toon.PNG" alt="web-portfolio" />
                         <div>
                           <p>web</p>
@@ -179,7 +179,7 @@ const IndexPage = ({ data }) => {
                       </div>
                     </a>
                     <a href="/portfolio#graphics" className="gallery-item">
-                      <div class="blog-card">
+                      <div className="blog-card">
                         <img src="assets/school-toon.PNG" alt="web-portfolio" />
                         <div>
                           <p>graphics</p>
@@ -187,7 +187,7 @@ const IndexPage = ({ data }) => {
                       </div>
                     </a>
                     <a href="/portfolio#other" className="gallery-item">
-                      <div class="blog-card">
+                      <div className="blog-card">
                         <img src="assets/school-toon.PNG" alt="web-portfolio" />
                         <div>
                           <p>other</p>
@@ -306,7 +306,7 @@ const IndexPage = ({ data }) => {
                     </AwesomeSlider> */}
                   {/* TODO VERSION 2 */}
                   {/* <a href="/portfolio#web" className="gallery-item">
-                      <div class="blog-card">
+                      <div className="blog-card">
                         <img src="assets/school-toon.PNG" alt="web-portfolio" />
                         <div>
                           <p>web</p>
@@ -314,7 +314,7 @@ const IndexPage = ({ data }) => {
                       </div>
                     </a>
                     <a href="/portfolio#graphics" className="gallery-item">
-                      <div class="blog-card">
+                      <div className="blog-card">
                         <img src="assets/school-toon.PNG" alt="web-portfolio" />
                         <div>
                           <p>graphics</p>
@@ -322,7 +322,7 @@ const IndexPage = ({ data }) => {
                       </div>
                     </a>
                     <a href="/portfolio#other" className="gallery-item">
-                      <div class="blog-card">
+                      <div className="blog-card">
                         <img src="assets/school-toon.PNG" alt="web-portfolio" />
                         <div>
                           <p>other</p>
