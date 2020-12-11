@@ -634,3 +634,7 @@ $shadow: 0px 0px 4px 0px $grey-light;
 }
 
 // @media only screen and (min-width: $small) {}
+.letterholder {
+  display: inline;
+  text-decoration: underline;
+}
