@@ -5,6 +5,8 @@ import Flippy, { FrontSide, BackSide } from "react-flippy"
 import Layout from "../components/layout"
 import { opChars } from "../components/opChars"
 
+//TODO add
+
 function shuffle(array) {
   for (let i = array.length - 1; i > 0; i--) {
     let j = Math.floor(Math.random() * (i + 1)) // random index from 0 to i
@@ -114,8 +116,19 @@ const OnePieceLaughGamePage = () => {
         <span>P.S. Image quality suuuuucks</span>
         <StyledTiles />
       </div>
+      <span>
+        Thanks to{" "}
+        <a href="https://listfist.com/list-of-one-piece-characters-by-laugh">
+          ListFist.com
+        </a>{" "}
+        as well as the One Piece 'smile' art exhibition at Tokyo Tower for these
+        resources and inspiration, as well as the main man Oda for all the years
+        of One Piece
+      </span>
     </Layout>
   )
 }
 
 export default OnePieceLaughGamePage
+
+// Thanks to https://listfist.com/list-of-one-piece-characters-by-laugh as well as the One Piece 'smile' art exhibition at Tokyo Tower for these resources and inspiration, as well as the main man Oda for all the years of One Piece
