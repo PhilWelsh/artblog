@@ -5,24 +5,19 @@ import Flippy, { FrontSide, BackSide } from "react-flippy"
 import Layout from "../components/layout"
 import { opChars } from "../components/opChars"
 
-// let SomeComponent = props => {
-//   return (
-//     <div
-//       css={{
-//         color: 'hotpink'
-//       }}
-//       {...props}
-//     />
-//   )
-// }
-
-// on reveal forEach change each tile's properties with timeout
+function shuffle(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    let j = Math.floor(Math.random() * (i + 1)) // random index from 0 to i
+    ;[array[i], array[j]] = [array[j], array[i]]
+  }
+  return array
+}
 
 const Tiles = ({ className }) => {
   return (
     <ul className={className}>
       {" "}
-      {opChars.map(char => {
+      {shuffle(opChars).map(char => {
         return (
           <StyledTilesTile>
             <Flippy
