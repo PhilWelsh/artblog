@@ -20,18 +20,18 @@ const WordHolder = ({word}) =>{
         setLettersRemaining([...filteredArray]);
     }
 
-    const handleKeyDown =(e)=>{
-        console.log(e.key)
-        console.log(lettersRemaining)
-        return lettersRemaining.includes(e.key) ? (console.log("!"), removeLetterFromArray(e.key)) : console.log("?")
-    }
+    // const handleKeyDown =(e)=>{
+    //     console.log(e.key)
+    //     console.log(lettersRemaining)
+    //     return lettersRemaining.includes(e.key) ? (console.log("!"), removeLetterFromArray(e.key)) : console.log("?")
+    // }
 
     function keyInputs(){
         return document.addEventListener('keydown', function(e){
             return lettersRemaining.includes(e.key) ? removeLetterFromArray(e.key) : null
         });
     }
-    keyInputs() 
+    keyInputs()
 
     //keyInputs works but is sloppy
 
