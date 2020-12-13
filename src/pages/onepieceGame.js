@@ -1,11 +1,9 @@
-import React from "react"
+import React, { useState, useRef } from "react"
 import styled from "@emotion/styled"
 import Flippy, { FrontSide, BackSide } from "react-flippy"
 
 import Layout from "../components/layout"
 import { opChars } from "../components/opChars"
-
-//TODO add
 
 function shuffle(array) {
   for (let i = array.length - 1; i > 0; i--) {
@@ -15,74 +13,133 @@ function shuffle(array) {
   return array
 }
 
+//TODO
+
+// * ADD FLIP ALL BUTTON
+// * CASCADE ANIMATIONS FROM FLIP ALL
+
+// * SHUFFLE ALL CARDS
+
+// CASCADE ANIMATIONS TO FLIP ENTER
+// transform: rotateY(-90deg) on flippy-cardContainer, remove and setTimeout
+// LAZYLOAD
+
+// ADD GAME MODE, ONE BY ONE, SELF EVALUATE WITH TICK OR CROSS
+// ADD SWIPE CORRECT/FALSE TO GAME MODE
+// SCORE CONTEXT FOR GAME MODE
+
+// ADD GAME MODE, FIND 'RANDOMNAME' FROM AVAILABLE CARDS
+
+// REPLACE IMAGES
+
+// ADD LANGUAGE SWITCH -> CONTEXT
+
+// P4 REMOVE AUTO-DETECT 'SHONA' LANGUAGE
+
 const Tiles = ({ className }) => {
-  return (
-    <ul className={className}>
-      {" "}
-      {shuffle(opChars).map(char => {
-        return (
-          <StyledTilesTile>
-            <Flippy
-              flipOnHover={false}
-              flipOnClick={true}
+  const flipContainerRef = useRef(null)
+  const handleFlipAll = reveal => {
+    const flippableChildren = flipContainerRef.current.children
+    let timeoutCount = 0
+    for (let i = 0; i < flippableChildren.length; i++) {
+      const current = flippableChildren
+        .item(i)
+        .querySelector(".flippy-cardContainer")
+      const currentActive = flippableChildren.item(i).querySelector(".isActive")
+        ? true
+        : false
+      if (!currentActive === reveal) {
+        setTimeout(() => {
+          current.click()
+        }, timeoutCount * 50)
+        timeoutCount += 1
+      }
+    }
+  }
+  const [counter, setCounter] = useState(0)
+  function handleReload() {
+    setCounter(counter + 1)
+  }
+
+  const ShuffledTiles = () => {
+    console.log(counter)
+    return shuffle(opChars).map(char => {
+      return (
+        <StyledTilesTile>
+          <Flippy
+            flipOnClick={true}
+            style={{ height: "100%", borderRadius: 7, overFlow: "hidden" }}
+          >
+            <FrontSide
               style={{
-                height: "100%",
-                borderRadius: 7,
-                overFlow: "hidden",
-                fontSize: 20,
+                backgroundImage: `url(https://res.cloudinary.com/philwelsh/image/upload/v1607661143/projects/onepiece-game/onepiece-card-back_xapfp6.jpg)`,
+                backgroundSize: "cover",
+                backgroundPosition: "center center",
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                padding: 0,
                 textAlign: "center",
               }}
             >
-              <FrontSide
+              <span
                 style={{
-                  backgroundImage: `url(https://res.cloudinary.com/philwelsh/image/upload/v1607661143/projects/onepiece-game/onepiece-card-back_xapfp6.jpg)`,
-                  backgroundSize: "cover",
-                  backgroundPosition: "center center",
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "center",
-                  padding: 0,
+                  lineBreak: "anywhere",
+                  padding: 5,
+                  background: "#ffffffd9",
+                  color: "black",
+                  fontWeight: "bold",
+                  transform: "rotate(-0)",
                 }}
               >
-                <span
-                  style={{
-                    lineBreak: "anywhere",
-                    padding: 5,
-                    background: "#ffffffd9",
-                    color: "black",
-                    fontWeight: "bold",
-                    transform: "rotate(-0)",
-                  }}
-                >
-                  {char.laugh}
-                </span>
-              </FrontSide>
-              <BackSide
+                {char.laugh}
+              </span>
+            </FrontSide>
+            <BackSide
+              style={{
+                backgroundImage: `url(${char.charImg})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center center",
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "flex-end",
+                textAlign: "center",
+              }}
+            >
+              <span
                 style={{
-                  backgroundImage: `url(${char.charImg})`,
-                  backgroundSize: "cover",
-                  backgroundPosition: "center center",
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "flex-end",
+                  padding: 5,
+                  background: "#ffffff80",
+                  color: "black",
+                  fontWeight: "bold",
                 }}
               >
-                <span
-                  style={{
-                    padding: 5,
-                    background: "#ffffff80",
-                    color: "black",
-                    fontWeight: "bold",
-                  }}
-                >
-                  {char.name}
-                </span>
-              </BackSide>
-            </Flippy>
-          </StyledTilesTile>
-        )
-      })}
-    </ul>
+                {char.name}
+              </span>
+            </BackSide>
+          </Flippy>
+        </StyledTilesTile>
+      )
+    })
+  }
+
+  return (
+    <>
+      <div>
+        <button onClick={() => handleFlipAll(true)} label="reveal all">
+          Reveal All
+        </button>
+        <button onClick={() => handleFlipAll(false)} label="hide all">
+          Hide All
+        </button>
+        <button onClick={handleReload} label="shuffle all">
+          Shuffle Characters
+        </button>
+      </div>
+      <ul className={className} ref={flipContainerRef}>
+        <ShuffledTiles />
+      </ul>
+    </>
   )
 }
 
@@ -105,6 +162,7 @@ const StyledTilesTile = styled.li`
   padding: 0;
   list-style: none;
   /*start*/
+  font-size: 20px;
 `
 
 const OnePieceLaughGamePage = () => {

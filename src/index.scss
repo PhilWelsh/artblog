@@ -164,8 +164,12 @@ main {
 footer {
   background: $primary;
   color: white;
+  padding: 5px 0;
+  a {
+    padding: 0 5px;
+  }
   svg {
-    margin: -2px 5px;
+    margin: -5px 5px;
   }
   .footer {
     display: flex;
