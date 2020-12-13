@@ -65,7 +65,7 @@ const Tiles = ({ className }) => {
     console.log(counter)
     return shuffle(opChars).map(char => {
       return (
-        <StyledTilesTile>
+        <StyledTilesTile key={char.name}>
           <Flippy
             flipOnClick={true}
             style={{ height: "100%", borderRadius: 7, overFlow: "hidden" }}
