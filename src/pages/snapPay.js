@@ -1,6 +1,7 @@
 import React, { useState, useRef } from "react"
 
 const SnapPayPage = () => {
+  const initKeyBoard = "1234567890qwertyuiopasdfghjkl;zxcvbnm,./".split("")
   const [targetValue, setTargetValue] = useState("")
   const [value, setValue] = useState([initKeyBoard, ""])
   let textInput = useRef()
@@ -8,7 +9,6 @@ const SnapPayPage = () => {
     console.log(textInput.current.value)
     transform(textInput.current.value)
   }
-  const initKeyBoard = "1234567890qwertyuiopasdfghjkl;zxcvbnm,./".split("")
 
   //split into rows/columns
   const chunk = (arr, size) => {
