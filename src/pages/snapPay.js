@@ -1,8 +1,8 @@
-import react, { useState, useRef } from "react"
+import React, { useState, useRef } from "react"
 
-const snapPayPage = () => {
+const SnapPayPage = () => {
   const [targetValue, setTargetValue] = useState("")
-  const [value, setValue] = useState("inital, value")
+  const [value, setValue] = useState([initKeyBoard, ""])
   let textInput = useRef()
   function handleClick() {
     console.log(textInput.current.value)
@@ -63,10 +63,10 @@ const snapPayPage = () => {
   }
 
   const transform = input => {
-    let splitInput = input.split(",")
-    console.log(input)
-    let keyboard = initKeyBoard
-    if (splitInput.length) {
+    if (input.length) {
+      let splitInput = input.split(",")
+      console.log(input)
+      let keyboard = initKeyBoard
       splitInput.forEach(action => {
         console.log("transforming", keyboard)
         switch (action) {
@@ -96,4 +96,4 @@ const snapPayPage = () => {
   )
 }
 
-export default snapPayPage
+export default SnapPayPage
